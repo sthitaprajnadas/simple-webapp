@@ -124,6 +124,7 @@ Open a browser and go to URL
 
     pip3 install flask
     pip3 install flask-mysql
+    pip3 install cryptography
 
 - Copy app.py or download it from source repository
 - Configure database credentials and parameters 
