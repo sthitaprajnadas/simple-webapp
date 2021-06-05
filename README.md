@@ -96,6 +96,8 @@ Open a browser and go to URL
     sudo rpm -Uvh mysql80-community-release-el7-3.noarch.rpm
     sudo yum -y install mysql-server
     sudo systemctl start mysqld
+    sudo yum -y install git
+
 
     # Check root password
     sudo grep 'password' /var/log/mysqld.log   
