@@ -11,6 +11,7 @@ This is used in the demonstration of development of Ansible Playbooks.
   - Install and Configure Web Server
   - Start Web Server
    
+   # Ubuntu
 ## 1. Install all required dependencies
   
   Python and its dependencies
@@ -65,3 +66,8 @@ Open a browser and go to URL
     http://<IP>:5000                            => Welcome
     http://<IP>:5000/how%20are%20you            => I am good, how about you?
     http://<IP>:5000/read%20from%20database     => JOHN
+
+
+  #ON AMI LINUX
+  
+
