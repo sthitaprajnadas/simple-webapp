@@ -68,6 +68,51 @@ Open a browser and go to URL
     http://<IP>:5000/read%20from%20database     => JOHN
 
 
-  #ON AMI LINUX
+  # ON AMI LINUX
+  
+## 1. Install python and dependencies
+  sudo yum -y update
+  sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel
+  
+  Download Python  
+  
+  cd /opt
+  sudo wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+  sudo tar xzf Python-3.7.9.tgz
+  
+  Install Python
+  
+  cd Python-3.7.9
+  sudo ./configure --enable-optimizations
+  sudo make altinstall
+  
+  sudo rm ../Python-3.7.9.tgz
+## 2. Install and Configure Database
+    
+  Install MySQL database
+    
+    sudo yum -y update
+    sudo wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+    sudo rpm -Uvh mysql80-community-release-el7-3.noarch.rpm
+    sudo yum -y install mysql-server
+    sudo systemctl start mysqld
+
+    # Check root password
+    sudo grep 'password' /var/log/mysqld.log   
+    # Change pwd
+    sudo mysql_secure_installation
+    
+  Create MySQL user
+    # mysql -u <username> -p
+
+    mysql> CREATE DATABASE employee_db;
+    mysql> CREATE USER 'db_user'@'localhost' IDENTIFIED BY 'Passw0rd/12';
+    mysql> GRANT ALL PRIVILEGES ON employee_db.* TO 'db_user'@'localhost';
+    mysql> USE employee_db;
+    mysql> CREATE TABLE employees (name VARCHAR(20));
+  
+
+
+
   
 
