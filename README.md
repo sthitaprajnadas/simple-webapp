@@ -111,8 +111,18 @@ Open a browser and go to URL
     mysql> USE employee_db;
     mysql> CREATE TABLE employees (name VARCHAR(20));
   
+  - Insert some test data
+        
+    mysql> INSERT INTO employees VALUES ('JOHN');
 
 
+  ## 4. Install and Configure Web Server
 
-  
+  Install Python Flask dependency
+
+    pip3 install flask
+    pip3 install flask-mysql
+
+- Copy app.py or download it from source repository
+- Configure database credentials and parameters 
 
